@@ -777,7 +777,7 @@ summary { font-weight: 700; cursor: pointer; color: #aaa; outline: none; letter-
 }
 .cal-nav button:hover { background: #333; color: #fff; }
 .cal-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; font-size: 0.78rem; text-align: center; }
-.cal-dow  { color: #444; font-weight: 700; padding-bottom: 6px; font-size: 0.74rem; border-bottom: 1px solid #1a1a1a; }
+.cal-dow  { color: #cccccc; font-weight: 700; padding-bottom: 6px; font-size: 0.74rem; border-bottom: 1px solid #1a1a1a; }
 .cal-day  { padding: 6px 0; border-radius: 5px; cursor: pointer; color: #666; position: relative; transition: 0.2s; border: 1px solid transparent; z-index: var(--z-above); }
 .cal-day:not(.empty):hover { background: rgba(255,255,255,0.04); color: #aaa; }
 .cal-day.today     { background: rgba(255,255,255,0.06); color: #ccc; font-weight: 700; }
@@ -946,7 +946,7 @@ body.light-mode .content-card h2     { color: #333; }
 body.light-mode .info-value          { color: #222; }
 body.light-mode .post-content        { color: #444; }
 body.light-mode .header-banner img   { filter: brightness(0.9); }
-body.light-mode .character-img       { filter: none); }
+body.light-mode .character-img       { filter: none;) }
 body.light-mode .character-img:hover { filter: none; }
 
 
