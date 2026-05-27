@@ -943,8 +943,8 @@ body.light-mode .content-card h2     { color: #333; }
 body.light-mode .info-value          { color: #222; }
 body.light-mode .post-content        { color: #444; }
 body.light-mode .header-banner img   { filter: none; }
-body.light-mode .character-img       { filter: brightness(0.9); }
-body.light-mode .character-img:hover { filter: brightness(1); }
+body.light-mode .character-img       { filter: none); }
+body.light-mode .character-img:hover { filter: none; }
 
 
 /* ================================================================= */
