@@ -399,7 +399,7 @@ window.shopItems = [
         name:  '오래된 소파',
         desc:  '낡았지만 앉으면 편안한 가구.',
         price: 800,
-        img:   'https://placehold.co/100x100/1a1a1a/aaaaaa?text=Sofa',
+        img:   'https://i.ibb.co/ksLz8T6X/0005-png.png',
         type:  'furniture',
         width:  120,
         height:  80,
