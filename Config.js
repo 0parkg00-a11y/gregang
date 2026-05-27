@@ -103,8 +103,8 @@ const charData = [
     },
     {
         id: 'p3',
-        name: '마바사',
-        title: 'B그룹',
+        name: '밧세바',
+        title: 'A그룹',
         img: 'https://placehold.co/300x400/1a1a1a/888888?text=마바사',
         quote: '세 번째 캐릭터의 대사를 여기에 입력하세요.',
         stats: '70,65,60,55,50,60,70,55',
@@ -112,8 +112,8 @@ const charData = [
     },
     {
         id: 'p4',
-        name: '사아자',
-        title: 'B그룹',
+        name: '에이라',
+        title: 'A그룹',
         img: 'https://placehold.co/300x400/1a1a1a/888888?text=사아자',
         quote: '네 번째 캐릭터의 대사를 여기에 입력하세요.',
         stats: '55,50,65,60,75,55,65,70',
