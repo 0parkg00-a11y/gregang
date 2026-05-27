@@ -110,6 +110,7 @@ a:hover { filter: brightness(1.3); }
     height: 220px;
     object-fit: cover;
     display: block;
+    filter: grayscale(0%) brightness(0.6);
 
 }
 
