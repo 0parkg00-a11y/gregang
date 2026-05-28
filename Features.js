@@ -223,8 +223,10 @@ window.uploadGalleryPost = async function () {
     var myCharId = charOwners[currentUser.email];
     if (!myCharId)                     return alert('권한이 없습니다.');
 
+    var title     = document.getElementById('gal-title').value.trim();
     var content   = document.getElementById('gal-content').value;
     var fileInput = document.getElementById('gal-file');
+    if (!title) return alert('제목을 입력해주세요.');
     if (!content && fileInput.files.length === 0) return alert('내용이나 이미지를 입력해주세요.');
 
     var uploadedUrl = null;
@@ -247,6 +249,7 @@ window.uploadGalleryPost = async function () {
     var res = await supabaseClient.from('gallery_posts').insert([{
         char_id:   myCharId,
         char_name: charName,
+        title:     title,
         content:   content,
         image_url: uploadedUrl,
         parent_id: null,               /* 본문이므로 null */
@@ -256,6 +259,7 @@ window.uploadGalleryPost = async function () {
     if (res.error) {
         alert('저장 실패');
     } else {
+        document.getElementById('gal-title').value   = '';
         document.getElementById('gal-content').value = '';
         document.getElementById('gal-file').value    = '';
         if (fileInput.files.length > 0) { event.target.innerText = '기록'; event.target.disabled = false; }
