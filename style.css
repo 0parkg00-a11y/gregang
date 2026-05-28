@@ -993,3 +993,26 @@ body.light-mode .character-img:hover { filter: none; }
     .post-main { flex-direction: column; }
     .post-img  { flex: none; width: 100%; max-width: 100%; }
 }
+
+.board-row {
+    padding: 16px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+}
+
+.board-title {
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.board-meta {
+    display: flex;
+    gap: 14px;
+    color: var(--text-sub);
+    font-size: 0.82rem;
+}
