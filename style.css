@@ -994,25 +994,31 @@ body.light-mode .character-img:hover { filter: none; }
     .post-img  { flex: none; width: 100%; max-width: 100%; }
 }
 
-.board-row {
-    padding: 16px 18px;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    margin-bottom: 10px;
-    background: rgba(255,255,255,0.03);
-    cursor: pointer;
+.gallery-list-item {
+    padding: 16px 20px;
 }
 
-.board-title {
-    color: var(--text-main);
-    font-size: 1rem;
-    font-weight: 700;
+.gallery-list-item .post-main {
+    display: block;
     margin-bottom: 8px;
 }
 
-.board-meta {
+.post-title {
+    color: #ddd;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.post-meta {
     display: flex;
-    gap: 14px;
-    color: var(--text-sub);
-    font-size: 0.82rem;
+    gap: 12px;
+    color: #555;
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+}
+
+.gallery-list-item .post-content {
+    color: #888;
+    font-size: 0.88rem;
 }
