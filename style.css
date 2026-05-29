@@ -1024,39 +1024,3 @@ body.light-mode .character-img:hover { filter: none; }
     border-radius:8px;
     margin-top:10px;
 }
-
-.board-row{
-    padding:12px 16px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    cursor:pointer;
-}
-
-.board-row:hover{
-    background:rgba(255,255,255,.03);
-}
-
-.board-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.board-title{
-    color:#ddd;
-    font-size:1rem;
-    font-weight:600;
-    flex:1;
-}
-
-.board-author{
-    color:#999;
-    font-size:0.85rem;
-    flex-shrink:0;
-}
-
-.board-date{
-    color:#666;
-    font-size:0.8rem;
-    margin-top:4px;
-}
