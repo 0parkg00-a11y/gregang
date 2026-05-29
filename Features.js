@@ -133,32 +133,17 @@ async function loadGalleryData(page) {
                 '</div></div>';
         }).join('');
 
-        html +=
-             '<div class="board-row" onclick="openGalleryPost(' + post.id + ')">' +
-
-        '<div class="board-title">' +
-            (post.title || '제목 없음') +
-        '</div>' +
-
-        '<div class="board-author">' +
-            (post.char_name || '익명') +
-        '</div>' +
-
-        '<div class="board-date">' +
-            new Date(post.created_at).toLocaleDateString() +
-        '</div>' +
-
-    '</div>';
-    });
-                        '<div style="display:flex;gap:10px;margin-top:10px;align-items:center;">' +
-                            '<button class="btn-reply" onclick="showReplyForm(' + post.id + ')">답글 달기</button>' +
-                            deleteBtn +
-                        '</div>' +
-                        toggleBtn +
-                    '</div>' +
+        html +='<div class="gallery-post-container" style="cursor:pointer;" onclick="openGalleryPostModal(' + post.id + ')">' +
+                '<div class="post-main">' +
+                    '<div class="post-info">' +
+                        '<div class="post-author">' + post.char_name + '</div>' +
+                        '<div style="font-size:1rem;color:#ccc;font-weight:bold;margin:4px 0;">' + title + '</div>' +
+                        '<div class="post-date">' + new Date(post.created_at).toLocaleString() + '</div>' +
+                        (replyCount > 0
+                            ? '<div style="font-size:0.8rem;color:#666;margin-top:4px;">답글 ' + replyCount + '개</div>'
+                            : '') +
+                    '</div>'+
                 '</div>' +
-                /* 답글 컨테이너 — 기본 숨김, toggleReplies() 로 열고 닫음 */
-                '<div class="post-replies" id="replies-' + post.id + '" style="display:none;">' + repliesHtml + '</div>' +
             '</div>';
     });
 
