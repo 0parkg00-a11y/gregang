@@ -2204,3 +2204,37 @@ document.addEventListener('keydown', function (e) {
         }
     }
 });
+
+window.saveGalleryPostEdit = async function () {
+
+    var postId =
+        document.getElementById('edit-post-id').value;
+
+    var title =
+        document.getElementById('edit-post-title').value;
+
+    var content =
+        document.getElementById('edit-post-content').value;
+
+    var res = await supabaseClient
+        .from('gallery_posts')
+        .update({
+            title: title,
+            content: content
+        })
+        .eq('id', postId);
+
+    if (res.error) {
+
+        alert('수정 실패');
+
+    } else {
+
+        alert('수정 완료');
+
+        closeModal('gallery-edit-modal');
+        closeModal('gallery-post-modal');
+
+        loadGalleryData(currentGalleryPage);
+    }
+};
