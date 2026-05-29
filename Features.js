@@ -358,6 +358,33 @@ window.openGalleryPostModal = function (postId) {
     } else {
         deleteBtn.style.display = 'none';
     }
+var editBtn = document.getElementById('gal-post-modal-edit');
+
+if (isMine) {
+
+    editBtn.style.display = 'inline-block';
+
+    editBtn.onclick = function () {
+
+        document.getElementById('edit-post-id').value = post.id;
+
+        document.getElementById('edit-post-title').value =
+            post.title || '';
+
+        document.getElementById('edit-post-content').value =
+            post.content || '';
+
+        document
+            .getElementById('gallery-edit-modal')
+            .classList.add('show');
+    };
+
+} else {
+
+    editBtn.style.display = 'none';
+
+}
+    
 
     document.getElementById('gal-post-modal-reply').onclick = function () {
         closeModal('gallery-post-modal');
