@@ -120,8 +120,9 @@ async function loadGalleryData(page) {
                             ? '<div style="font-size:0.8rem;color:#666;margin-top:4px;">답글 ' + replyCount + '개</div>'
                             : '') +
                     '</div>' +
-        '</div>' +
-    '</div>';
+            '</div>' +
+     '</div>';
+    });
     
     if (totalPages > 1) {
         html += '<div class="gallery-pagination">';
@@ -217,7 +218,6 @@ window.uploadGalleryPost = async function () {
         title:     title,
         char_id:   myCharId,
         char_name: charName,
-        title:     title,
         content:   content,
         image_url: uploadedUrl,
         parent_id: null,               /* 본문이므로 null */
@@ -267,6 +267,8 @@ window.submitReply = async function () {
     var charName = (charData.find(function (c) {
         return c.id === myCharId.replace('char-', '');
     }) || {}).name || '익명';
+
+    var title = '답글';  
 
     var res = await supabaseClient.from('gallery_posts').insert([{
         title:     title,
