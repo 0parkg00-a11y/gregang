@@ -126,16 +126,7 @@ async function loadGalleryData(page) {
 
     '</div>';
     });
-                        '<div style="display:flex;gap:10px;margin-top:10px;align-items:center;">' +
-                            '<button class="btn-reply" onclick="showReplyForm(' + post.id + ')">답글 달기</button>' +
-                            deleteBtn +
-                        '</div>' +
-                        toggleBtn +
-                    '</div>' +
-                '</div>' +
-            '</div>';
-    });
-
+    
     if (totalPages > 1) {
         html += '<div class="gallery-pagination">';
         for (var i = 1; i <= totalPages; i++) {
