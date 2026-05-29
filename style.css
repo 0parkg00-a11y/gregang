@@ -1024,3 +1024,8 @@ body.light-mode .character-img:hover { filter: none; }
     border-radius:8px;
     margin-top:10px;
 }
+
+
+body {
+    cursor: url('./Teddy-Bear.cur'), auto;
+}
