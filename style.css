@@ -707,7 +707,7 @@ summary { font-weight: 700; cursor: pointer; color: #aaa; outline: none; letter-
 }
 .post-img:hover { filter: grayscale(0%); transform: scale(1.02); }
 .post-info    { flex: 1; min-width: 0; }
-.post-author  { color: #aaa; font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+.post-author  { color: #aaa; font-weight: 700; font-size: 0.75rem; margin-bottom: 4px; }
 .post-date    { color: #444; font-size: 0.76rem; margin-bottom: 10px; }
 .post-content { color: #888; line-height: 1.7; font-size: 0.9rem; }
 
