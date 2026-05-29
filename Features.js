@@ -215,6 +215,7 @@ window.uploadGalleryPost = async function () {
     }) || {}).name || '익명';
 
     var res = await supabaseClient.from('gallery_posts').insert([{
+        title:     title,
         char_id:   myCharId,
         char_name: charName,
         title:     title,
@@ -2110,3 +2111,57 @@ if (typeof supabaseClient !== 'undefined' && supabaseClient) {
         )
         .subscribe();
 }
+
+window.openGalleryPost = async function(postId){
+
+    var result = await supabaseClient
+        .from('gallery_posts')
+        .select('*')
+        .eq('id', postId)
+        .single();
+
+    if(result.error || !result.data){
+        alert('게시글을 불러올 수 없습니다.');
+        return;
+    }
+
+    var post = result.data;
+
+    var repliesResult = await supabaseClient
+        .from('gallery_posts')
+        .select('*')
+        .eq('parent_id', postId)
+        .order('created_at',{ascending:true});
+
+    var replies = repliesResult.data || [];
+
+    var replyText = '';
+
+    replies.forEach(function(reply){
+
+        replyText +=
+
+            '\n\n────────────\n' +
+
+            (reply.char_name || '익명') +
+
+            '\n' +
+
+            (reply.content || '');
+
+    });
+
+    alert(
+        (post.title || '제목 없음') +
+
+        '\n\n작성자 : ' +
+
+        (post.char_name || '익명') +
+
+        '\n\n' +
+
+        (post.content || '') +
+
+        replyText
+    );
+};
