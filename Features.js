@@ -110,19 +110,18 @@ async function loadGalleryData(page) {
         var title      = post.title || '(제목 없음)';
 
         html +=
-             '<div class="board-row" onclick="openGalleryPostModal(' + post.id + ')">' +
-
-                '<div class="board-top">' +
-                    '<div class="board-title">' + title + '</div>' +
-                    '<div class="board-author">' + post.char_name + '</div>' +
-                '</div>' +
-
-                '<div class="board-date">' +
-                    new Date(post.created_at).toLocaleDateString() +
-                '</div>' +
-
+            '<div class="gallery-post-container" style="cursor:pointer;" onclick="openGalleryPostModal(' + post.id + ')">' +
+                '<div class="post-main">' +
+                    '<div class="post-info">' +
+                        '<div class="post-author">' + post.char_name + '</div>' +
+                        '<div style="font-size:1rem;color:#ccc;font-weight:bold;margin:4px 0;">' + title + '</div>' +
+                        '<div class="post-date">' + new Date(post.created_at).toLocaleString() + '</div>' +
+                        (replyCount > 0
+                            ? '<div style="font-size:0.8rem;color:#666;margin-top:4px;">답글 ' + replyCount + '개</div>'
+                            : '') +
+                    '</div>' +
+        '</div>' +
     '</div>';
-    });
     
     if (totalPages > 1) {
         html += '<div class="gallery-pagination">';
