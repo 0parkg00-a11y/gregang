@@ -96,7 +96,7 @@ const charData = [
         id: 'p2',
         name: '엘린',
         title: 'A그룹',
-        img: 'https://placehold.co/300x400/1a1a1a/888888?text=다라마',
+        img: 'https://i.ibb.co/DHMX1557/27164.png',
         quote: '두 번째 캐릭터의 대사를 여기에 입력하세요.',
         stats: '50,60,55,70,60,75,60,65',
         color: '180, 180, 180',
