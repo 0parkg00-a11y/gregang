@@ -495,7 +495,7 @@ window.shopItems = [
         name:  '원목 바닥재',
         desc:  '따뜻한 느낌의 원목 바닥재.',
         price: 800,
-        img:   'hhttps://imgur.com/8Dpoujt.png',
+        img:   'https://imgur.com/8Dpoujt.png',
         type:  'floor',
         color: '#5a4a3a',
     },
