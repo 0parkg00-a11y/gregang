@@ -469,7 +469,7 @@ window.shopItems = [
     {
         name:  '가구 생성권',
         desc:  '나만의 커스텀 가구 / 벽지 / 바닥재를 직접 제작할 수 있습니다.',
-        price: 5000,
+        price: 10,
         img:   'https://placehold.co/100x100/1a1a1a/aaaaaa?text=DIY',
         type:  'item', /* 사용 시 DIY 모달 열림 — index.html 인라인 스크립트 참조 */
     },
