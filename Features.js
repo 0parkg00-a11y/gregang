@@ -505,8 +505,8 @@ window.shopItems = [
         price: 50,
         img:   'https://i.imgur.com/pSKj0iq.png',
         type:  'furniture',
-        width: 217,
-        height: 267,
+        width: 180,
+        height: 180,
     },
     {
         name:  '강아지 침대',
@@ -514,8 +514,8 @@ window.shopItems = [
         price: 50,
         img:   'https://i.imgur.com/pSKj0iq.png',
         type:  'furniture',
-        width: 217,
-        height: 267,
+        width: 180,
+        height: 180,
     },
     {
         name:  '고양이 침대',
@@ -523,8 +523,8 @@ window.shopItems = [
         price: 50,
         img:   'https://i.imgur.com/Ws3sfeg.png',
         type:  'furniture',
-        width: 217,
-        height: 267,
+        width: 180,
+        height: 180,
     },
     {
         name:  '토끼 침대',
@@ -532,8 +532,8 @@ window.shopItems = [
         price: 50,
         img:   'https://i.imgur.com/fOQQcog.png',
         type:  'furniture',
-        width: 217,
-        height: 267,
+        width: 180,
+        height: 180,
     },
     {
         name:  '탁자',
@@ -595,7 +595,7 @@ window.shopItems = [
         price: 50,
         img:   'https://i.imgur.com/thLZJ1I.png',
         type:  'furniture',
-        width: 90,
+        width: 50,
         height: 50,
     },
     {
@@ -604,7 +604,7 @@ window.shopItems = [
         price: 50,
         img:   'https://i.imgur.com/yumavQ1.png',
         type:  'furniture',
-        width: 90,
+        width: 50,
         height: 50,
     },
     {
