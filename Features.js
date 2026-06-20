@@ -495,9 +495,27 @@ window.shopItems = [
         name:  '원목 바닥재',
         desc:  '따뜻한 느낌의 원목 바닥재.',
         price: 800,
-        img:   'https://imgur.com/8Dpoujt.png',
+        img:   'https://placehold.co/100x100/1a1a1a/aaaaaa?text=Floor',
         type:  'floor',
         color: '#5a4a3a',
+    },
+    {
+        name:  '침대',
+        desc:  '검은색 침대.',
+        price: 50,
+        img:   'https://i.imgur.com/pSKj0iq.png',
+        type:  'furniture',
+        width:  120,
+        height:  80,
+    },
+        {
+        name:  '작은 탁자',
+        desc:  '검은색 작은 탁자.',
+        price: 50,
+        img:   'https://i.imgur.com/PJDHgaN.png',
+        type:  'furniture',
+        width:  120,
+        height:  80,
     },
 ];
 
