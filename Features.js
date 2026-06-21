@@ -507,6 +507,15 @@ window.shopItems = [
         type:  'floor',
         color: '#5a4a3a',
     },
+        {
+        name:  '벽지',
+        desc:  '치이카와',
+        price: 10,
+        img:   'https://imgur.com/NaWpHVg.png',
+        type:  'wallpaper',
+        colorL: '#2a2a2a',
+        colorR: '#1a1a1a',
+    },
     {
         name:  '침대',
         desc:  '검은색 일반 침대.',
