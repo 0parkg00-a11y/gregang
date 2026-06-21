@@ -500,6 +500,14 @@ window.shopItems = [
         color: '#5a4a3a',
     },
     {
+        name:  '바닥재',
+        desc:  '치이카와',
+        price: 10,
+        img:   'https://imgur.com/NaWpHVg',
+        type:  'floor',
+        color: '#5a4a3a',
+    },
+    {
         name:  '침대',
         desc:  '검은색 일반 침대.',
         price: 50,
