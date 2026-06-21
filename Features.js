@@ -503,7 +503,7 @@ window.shopItems = [
         name:  '바닥재',
         desc:  '치이카와',
         price: 10,
-        img:   'https://imgur.com/NaWpHVg',
+        img:   'https://imgur.com/NaWpHVg.png',
         type:  'floor',
         color: '#5a4a3a',
     },
