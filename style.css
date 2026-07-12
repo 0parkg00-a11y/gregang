@@ -1026,6 +1026,15 @@ body.light-mode .character-img:hover { filter: none; }
 }
 
 
-body {
-    cursor: url('./Teddy-Bear.cur'), auto;
+body,
+button,
+a,
+.nav-btn,
+.phase-btn,
+.link-btn,
+.character-img,
+.dynamic-keycap,
+.dynamic-keycap:hover,
+.dynamic-keycap:active {
+    cursor: url('./Teddy-Bear.cur'), auto !important;
 }
