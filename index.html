@@ -180,6 +180,169 @@
         <button class="nav-btn" onclick="openTab('MyRoom',this); if(typeof MyRoomSys!=='undefined') MyRoomSys.loadVisitList();">Room</button>
       </nav>
 
+         <!-- ===== Sound Pad ===== -->
+<style>
+.soundpad-wrapper{
+    margin:20px 0;
+    padding:20px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+}
+
+#keycap-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.dynamic-keycap{
+    position:relative;
+    width:100px;
+    height:100px;
+    background:linear-gradient(to bottom,#fdfdfd,#e6e6e6);
+    border:2px solid #d1d1d1;
+    border-radius:12px 12px 18px 18px;
+    cursor:pointer;
+    outline:none;
+    user-select:none;
+    touch-action:manipulation;
+    box-shadow:
+        0 12px 0 var(--shadow-color,#d1d1d1),
+        0 15px 20px rgba(0,0,0,.15);
+    transition:all .05s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.dynamic-keycap:active,
+.dynamic-keycap.pressed{
+    top:10px;
+    box-shadow:
+        0 2px 0 var(--shadow-color,#b3b3b3),
+        0 4px 5px rgba(0,0,0,.2) !important;
+    background:linear-gradient(to bottom,#e6e6e6,#d9d9d9) !important;
+}
+
+.dynamic-keycap img{
+    width:100px;
+    height:100px;
+    border-radius:12px;
+    pointer-events:none;
+}
+</style>
+
+<div class="soundpad-wrapper">
+    <div id="keycap-container"></div>
+</div>
+
+<script>
+(function(){
+
+    const container = document.getElementById('keycap-container');
+
+    const keycapList = [
+        {
+            img:"https://i.imgur.com/6kcuxa8.png",
+            sound:"https://www.image2url.com/r2/default/audio/1783804622546-5e71fd65-ce5b-4408-b7d7-f7b57987c740.mp3",
+            shadowColor:"#FFCF41",
+            bindKey:"1"
+        },
+        {
+            img:"https://i.imgur.com/F4jnTA9.png",
+            sound:"https://www.image2url.com/r2/default/audio/1783804622546-5e71fd65-ce5b-4408-b7d7-f7b57987c740.mp3",
+            shadowColor:"#B93636",
+            bindKey:"2"
+        },
+        {
+            img:"https://i.imgur.com/isJi6XH.png",
+            sound:"https://www.image2url.com/r2/default/audio/1783804622546-5e71fd65-ce5b-4408-b7d7-f7b57987c740.mp3",
+            shadowColor:"#A2C9B1",
+            bindKey:"3"
+        },
+        {
+            img:"https://i.imgur.com/qPWFvYe.png",
+            sound:"https://www.image2url.com/r2/default/audio/1783804622546-5e71fd65-ce5b-4408-b7d7-f7b57987c740.mp3",
+            shadowColor:"#FFBBC1",
+            bindKey:"4"
+        },
+        {
+            img:"https://i.imgur.com/GW8FlN2.png",
+            sound:"https://www.image2url.com/r2/default/audio/1783804622546-5e71fd65-ce5b-4408-b7d7-f7b57987c740.mp3",
+            shadowColor:"#E4DFCD",
+            bindKey:"5"
+        }
+    ];
+
+    const activeKeycaps = [];
+
+    keycapList.forEach(currentData => {
+
+        const newKeycap = document.createElement('button');
+        newKeycap.className = 'dynamic-keycap';
+
+        newKeycap.style.setProperty(
+            '--shadow-color',
+            currentData.shadowColor
+        );
+
+        newKeycap.innerHTML =
+            `<img src="${currentData.img}" alt="">`;
+
+        const clickSound = new Audio(currentData.sound);
+
+        function triggerClick(){
+            clickSound.currentTime = 0;
+            clickSound.play().catch(()=>{});
+        }
+
+        newKeycap.addEventListener(
+            'pointerdown',
+            triggerClick
+        );
+
+        container.appendChild(newKeycap);
+
+        activeKeycaps.push({
+            element:newKeycap,
+            trigger:triggerClick,
+            bindKey:currentData.bindKey.toLowerCase()
+        });
+    });
+
+    window.addEventListener('keydown',function(e){
+
+        if(e.repeat) return;
+
+        const pressedKey = e.key.toLowerCase();
+
+        activeKeycaps.forEach(keycap=>{
+            if(keycap.bindKey === pressedKey){
+                keycap.trigger();
+                keycap.element.classList.add('pressed');
+            }
+        });
+    });
+
+    window.addEventListener('keyup',function(e){
+
+        const releasedKey = e.key.toLowerCase();
+
+        activeKeycaps.forEach(keycap=>{
+            if(keycap.bindKey === releasedKey){
+                keycap.element.classList.remove('pressed');
+            }
+        });
+    });
+
+})();
+</script>
+<!-- ===== End Sound Pad ===== -->
+
 
       <!-- ════════════════════════════════════════
            Home 섹션 — 챕터별 소개 슬라이더
